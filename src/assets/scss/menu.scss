@@ -1,0 +1,111 @@
+@import "./variables.scss";
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu__wrapper {
+    position: absolute;
+    z-index: 2;
+}
+
+.menu__ul {
+    display: inline-flex;
+}
+
+.menu__li {
+    color: $dark-yellow;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.active {
+    color: #ffffff;
+}
+
+
+.menu__li:not(:first-child) {
+    padding-left: 33px;
+}
+
+@keyframes menu-animation-before {
+    0% {
+        width: 0px;
+        background-color: $pink;
+        opacity: 1;
+    }
+    100% {
+        width: 97%;
+        background-color: $pink;
+    }
+  }
+
+@keyframes menu-animation-after {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+        background-color: $yellow;
+    }
+  }
+
+
+
+.nav-link{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    padding: 10px;
+    cursor: none;
+    
+    &:before {
+        content: '';
+        background-color: $yellow;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10%;
+        height: 100%;
+        z-index: -1;
+      }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      
+      &:hover {
+        color: white;
+
+        &:before {
+            animation: menu-animation-before 0.1s both;
+            animation-timing-function: ease-out;
+      /*       animation-direction: alternate; */
+          }
+
+          &:after {
+            animation: menu-animation-after 0.2s both;
+            animation-delay: 0.2s;
+            animation-timing-function: ease-out;
+/*             animation-direction: alternate; */
+          }
+
+    
+    }
+
+
+}

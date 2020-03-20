@@ -1,0 +1,23 @@
+#social__wrapper {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    text-align: right;
+}
+
+.social__ul {
+    display: inline-flex;
+}
+
+.social__li {
+    font-size: 0.8em;
+    color: $dark-yellow;
+    padding-right: 33px;
+    transition: 100ms ease-in;
+}
+
+.social__li:hover {
+    color: $pink;
+    transform: translateY(-5px);
+}

@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap');
+
+@font-face {
+  font-family: "Murmansk";
+  src: url("../font/Murmansk.eot");
+  src: url('../font/Murmansk.eot?#iefix') format('embedded-opentype'), 
+  url("../font/Murmansk.ttf") format("truetype"),
+    url("../font/Murmansk.woff") format("woff");
+}
+
+body {
+  font-size: 16px;
+}
+
+p,
+li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: $blue;
+  font-weight: 400;
+  text-align: center;
+}
+
+.link--inpage {
+  color: $pink;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.link--inpage__inner {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  left: -2%;
+  top: 0;
+  z-index: -1;
+  transition: 200ms ease-in-out;
+}
+
+.link--inpage:hover {
+  color: white;
+  span.link--inpage__inner {
+    height: 100%;
+    width: 105%;
+    position: absolute;
+    left: -2%;
+    top: 0;
+    z-index: -1;
+    background-color: $pink;
+  }
+}
+
+.letter {
+  font-family: "Murmansk", sans-serif;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  line-height: 1rem;
+  color: $blue;
+  font-weight: 200;
+  /*   font-size: 6vw; */
+  margin-bottom: 0px;
+  opacity: 0;
+  transform: translate(0px, -100px);
+}
+
+.letter--h1 {
+  line-height: 1rem;
+  font-weight: 200;
+  font-size: 10rem;
+  margin-bottom: 0px;
+  opacity: 0;
+  transform: translate(0px, -100px);
+}
+
+.letter--h2 {
+  font-size: 6vw;
+}
+
+#intro--hello {
+  color: $blue;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.skills__ul {
+  .skills__ul--title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: $pink;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    transform: skewY(-15deg);
+    min-height: 3rem;
+  }
+}
